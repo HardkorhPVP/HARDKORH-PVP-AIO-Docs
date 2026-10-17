@@ -11,7 +11,7 @@ excerpt: "Intelligent Feral Druid PvP for World of Warcraft: Midnight on Project
   <img class="hk-hero__wordmark" src="{{ '/assets/images/brand/hardkorh-wordmark-large.webp' | relative_url }}" alt="" width="861" height="288">
   <p class="hk-hero__eyebrow">FERAL DRUID PVP <span class="hk-pill hk-pill--info">v1.0.0</span></p>
   <p class="hk-hero__tagline">Intelligent Feral Druid PvP</p>
-  <p class="hk-hero__copy">HARDKORH runs your Feral rotation, holds one validated kill target, plans crowd control on the enemy healer, layers your defensives and coordinates your burst, and KORHVISION shows all of it on a compact live combat HUD. Movement, positioning and strategy stay in your hands.</p>
+  <div class="hk-hero__copy"><p>HARDKORH runs your Feral rotation, holds one validated kill target, plans crowd control on the enemy healer, layers your defensives and coordinates your burst, and KORHVISION shows all of it on a compact live combat HUD. Movement, positioning and strategy stay in your hands.</p></div>
   <div class="hk-hero__actions">
     <span class="btn btn--large hk-btn-soon" aria-disabled="true" title="The Project Sylvanas Marketplace listing is coming with the v1.0.0 release">GET HARDKORH &middot; COMING SOON</span>
     <a class="btn btn--primary btn--large" href="{{ '/getting-started/requirements/' | relative_url }}">READ THE GUIDE</a>

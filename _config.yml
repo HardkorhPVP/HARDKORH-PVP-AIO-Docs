@@ -55,6 +55,7 @@ include:
   - _pages
 exclude:
   - README.md
+  - HEADER_VISUAL_MANIFEST.md
   - Gemfile
   - Gemfile.lock
   - vendor
@@ -82,29 +83,44 @@ defaults:
       toc: false
       sidebar:
         nav: "docs"
-  # Page atmosphere (decorative only). Each class selects a CSS-background treatment for the page title card in
-  # assets/css/main.scss; page content and the real screenshots are unchanged. Pages not listed keep the plain title.
-  - scope: { path: "_pages/feral-required-talents.md" }
-    values: { classes: [hk-art, hk-art--feral] }
-  - scope: { path: "_pages/feral-gear-and-stats.md" }
-    values: { classes: [hk-art, hk-art--feral, hk-art--right, hk-art--quiet] }
-  - scope: { path: "_pages/feral-pve.md" }
-    values: { classes: [hk-art, hk-art--feral, hk-art--right, hk-art--quiet] }
-  - scope: { path: "_pages/hardkorh-korhshield.md" }
-    values: { classes: [hk-art, hk-art--feral, hk-art--left] }
-  - scope: { path: "_pages/404.md" }
-    values: { classes: [hk-art, hk-art--feral] }
-  - scope: { path: "_pages/feral-battlegrounds.md" }
-    values: { classes: [hk-art, hk-art--battleground] }
-  - scope: { path: "_pages/feral-arena-and-solo-shuffle.md" }
-    values: { classes: [hk-art, hk-art--arena] }
-  - scope: { path: "_pages/hardkorh-korhsight.md" }
-    values: { classes: [hk-art, hk-art--arena] }
-  - scope: { path: "_pages/hardkorh-korhtrap.md" }
-    values: { classes: [hk-art, hk-art--arena] }
-  - scope: { path: "_pages/hardkorh-arena-burst.md" }
-    values: { classes: [hk-art, hk-art--arena] }
-  - scope: { path: "_pages/hardkorh-korhvision.md" }
-    values: { classes: [hk-orn] }
+  # Page headers (decorative only). Every page has its own header composition: hk-hdr--<page> selects that page's art crop
+  # and treatment in assets/css/main.scss; hk-art--quiet gives the restrained pages a shorter, quieter card. Page content and
+  # the real screenshots are unchanged. HEADER_VISUAL_MANIFEST.md lists every composition; keep them unique.
+  - scope: { path: "_pages/getting-started-requirements.md" }
+    values: { classes: [hk-art, hk-hdr--requirements, hk-art--quiet] }
+  - scope: { path: "_pages/getting-started-installation.md" }
+    values: { classes: [hk-art, hk-hdr--installation, hk-art--quiet] }
+  - scope: { path: "_pages/getting-started-first-launch.md" }
+    values: { classes: [hk-art, hk-hdr--first-launch, hk-art--quiet] }
+  - scope: { path: "_pages/getting-started-keybinds.md" }
+    values: { classes: [hk-art, hk-hdr--keybinds, hk-art--quiet] }
   - scope: { path: "_pages/hardkorh-settings.md" }
-    values: { classes: [hk-orn] }
+    values: { classes: [hk-art, hk-hdr--settings, hk-art--quiet] }
+  - scope: { path: "_pages/hardkorh-korhvision.md" }
+    values: { classes: [hk-art, hk-hdr--korhvision] }
+  - scope: { path: "_pages/hardkorh-korhsight.md" }
+    values: { classes: [hk-art, hk-hdr--korhsight] }
+  - scope: { path: "_pages/hardkorh-korhtrap.md" }
+    values: { classes: [hk-art, hk-hdr--korhtrap] }
+  - scope: { path: "_pages/hardkorh-korhshield.md" }
+    values: { classes: [hk-art, hk-hdr--korhshield] }
+  - scope: { path: "_pages/hardkorh-arena-burst.md" }
+    values: { classes: [hk-art, hk-hdr--arena-burst] }
+  - scope: { path: "_pages/feral-required-talents.md" }
+    values: { classes: [hk-art, hk-hdr--required-talents] }
+  - scope: { path: "_pages/feral-gear-and-stats.md" }
+    values: { classes: [hk-art, hk-hdr--gear-and-stats] }
+  - scope: { path: "_pages/feral-arena-and-solo-shuffle.md" }
+    values: { classes: [hk-art, hk-hdr--arena-solo] }
+  - scope: { path: "_pages/feral-battlegrounds.md" }
+    values: { classes: [hk-art, hk-hdr--battlegrounds] }
+  - scope: { path: "_pages/feral-pve.md" }
+    values: { classes: [hk-art, hk-hdr--pve, hk-art--quiet] }
+  - scope: { path: "_pages/support-troubleshooting.md" }
+    values: { classes: [hk-art, hk-hdr--troubleshooting, hk-art--quiet] }
+  - scope: { path: "_pages/support-faq.md" }
+    values: { classes: [hk-art, hk-hdr--faq, hk-art--quiet] }
+  - scope: { path: "_pages/support-changelog.md" }
+    values: { classes: [hk-art, hk-hdr--changelog, hk-art--quiet] }
+  - scope: { path: "_pages/404.md" }
+    values: { classes: [hk-art, hk-hdr--404] }

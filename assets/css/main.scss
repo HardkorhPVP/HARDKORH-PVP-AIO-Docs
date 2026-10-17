@@ -114,7 +114,9 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
   background: radial-gradient(ellipse at 50% 0%, rgba(123, 63, 228, 0.28), rgba(123, 63, 228, 0) 70%); }
 .page__content .hk-hero__tagline, .hk-hero__tagline { margin: 0.2em 0 0.4em; font-size: 1.6em; font-weight: 800; color: $hk-purple-hi; letter-spacing: 0.04em; border: 0; }
 .hk-hero__tagline::before { display: none !important; }
-.hk-hero__copy { max-width: 46em; margin: 0 auto 1.4em; color: $hk-text; font-size: 1.05em; }
+/* dedicated hero-copy container: centred on the hero's centreline (the theme's .page__content p margins must not apply) */
+.page__content .hk-hero__copy { max-width: 800px; margin: 0 auto 1.4em; text-align: center; }
+.page__content .hk-hero__copy p { margin: 0; color: $hk-text; font-size: 1.05em; text-wrap: balance; }
 .hk-hero__actions { display: flex; flex-wrap: wrap; gap: 0.7em; justify-content: center; }
 .hk-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
@@ -152,26 +154,61 @@ $hk-rule: linear-gradient(90deg, rgba(149, 105, 229, 0) 0%, rgba(149, 105, 229, 
 .page__inner-wrap > header::after { content: ""; display: block; width: 72px; height: 3px; margin-top: 0.6em; background: linear-gradient(90deg, $hk-purple, $hk-green);
   -webkit-clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%); }
 
-/* page title cards: hk-art pages show one illustration masked into the right side; hk-orn pages get the frame only */
-.hk-art .page__inner-wrap > header, .hk-orn .page__inner-wrap > header {
+/* page title cards: every page shows its own illustration crop masked into the right side of the card */
+.hk-art .page__inner-wrap > header {
   position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;
   padding: 1.3rem 1.4rem 1.1rem; margin-bottom: 1.8rem; border: 1px solid $hk-line; border-radius: 10px;
   background: linear-gradient(160deg, $hk-surface-2 0%, $hk-surface 45%, $hk-black 100%);
 }
 .hk-art .page__inner-wrap > header { min-height: 9.5rem; }
-.hk-art .page__title, .hk-orn .page__title { margin: 0; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85); }
+.hk-art.hk-art--quiet .page__inner-wrap > header { min-height: 7rem; }
+.hk-art .page__title { margin: 0; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85); }
 .hk-art .page__inner-wrap > header::before {
   content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; width: 64%; pointer-events: none;
   background-repeat: no-repeat; background-size: cover; background-position: 50% 40%; opacity: 0.75;
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 35%, #000 75%);
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 35%, #000 75%);
 }
-.hk-art--feral .page__inner-wrap > header::before { background-image: url("../images/art/hk-art-feral.webp"); background-size: auto 140%; }
-.hk-art--feral.hk-art--left .page__inner-wrap > header::before { background-position: 0% 40%; }
-.hk-art--feral.hk-art--right .page__inner-wrap > header::before { background-position: 100% 40%; }
-.hk-art--battleground .page__inner-wrap > header::before { width: 46%; background-image: url("../images/art/hk-art-battleground.webp"); background-position: 50% 12%; }
-.hk-art--arena .page__inner-wrap > header::before { width: 42%; background-image: url("../images/art/hk-art-stone.webp"); background-position: 50% 37%; }
-.hk-art--quiet .page__inner-wrap > header::before { opacity: 0.45; }
+
+/* Per-page header art. Each page has its own small crop in assets/images/art/headers/ (so a page loads only its own header
+   image), its own box width, focus and opacity. The box is capped near the crop's native width so wide screens never show a
+   visibly upscaled crop. HEADER_VISUAL_MANIFEST.md records every page's source region and treatment: keep them unique. */
+@mixin hk-header($file, $native, $box, $pos: 50% 50%, $op: 0.7, $dir: "headers/") {
+  .page__inner-wrap > header::before {
+    width: $box; max-width: round($native * 1.12); background-image: url("../images/art/#{$dir}#{$file}.webp"); background-position: $pos; opacity: $op;
+    @if $box < 36% {
+      -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 40%); mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 40%);
+    }
+  }
+  @media (max-width: 600px) { .page__inner-wrap > header::before { width: if($box < 46%, 46%, $box); opacity: $op * 0.72; } }
+}
+/* Getting Started */
+.hk-hdr--requirements { @include hk-header("hdr-requirements", 262px, 40%, 50% 50%, 0.7); }
+.hk-hdr--installation { @include hk-header("hdr-installation", 252px, 40%, 50% 60%, 0.75); }
+.hk-hdr--first-launch { @include hk-header("hdr-first-launch", 615px, 50%, 50% 45%, 0.7); }
+.hk-hdr--keybinds { @include hk-header("hdr-keybinds", 220px, 34%, 35% 50%, 0.6); }
+/* HARDKORH (korhsight, korhtrap and arena-burst: arena family) */
+.hk-hdr--settings { @include hk-header("hdr-settings", 190px, 30%, 50% 45%, 0.55); }
+.hk-hdr--korhvision { @include hk-header("hdr-korhvision", 340px, 56%, 50% 65%, 0.75); }
+.hk-hdr--korhsight { @include hk-header("hdr-korhsight", 660px, 60%, 50% 50%, 0.7); }
+.hk-hdr--korhtrap { @include hk-header("hdr-korhtrap", 308px, 40%, 50% 40%, 0.7); }
+.hk-hdr--korhshield { @include hk-header("hdr-korhshield", 300px, 48%, 50% 60%, 0.65); }
+.hk-hdr--arena-burst { @include hk-header("hdr-arena-burst", 585px, 58%, 50% 50%, 0.75); }
+/* Feral Druid (arena-solo is the canonical arena page: the full arena artwork, broadest and strongest use) */
+.hk-hdr--required-talents { @include hk-header("hdr-required-talents", 480px, 64%, 50% 40%, 0.75); }
+.hk-hdr--gear-and-stats { @include hk-header("hdr-gear-and-stats", 190px, 30%, 50% 25%, 0.75); }
+.hk-hdr--arena-solo { @include hk-header("hk-art-arena", 1200px, 76%, 50% 52%, 0.8, ""); }
+.hk-hdr--battlegrounds { @include hk-header("hdr-battlegrounds", 298px, 46%, 50% 12%, 0.75); }
+.hk-hdr--pve { @include hk-header("hdr-pve", 158px, 25%, 50% 42%, 0.6); }
+/* Support and 404 */
+.hk-hdr--troubleshooting { @include hk-header("hdr-troubleshooting", 230px, 36%, 50% 35%, 0.6); }
+.hk-hdr--faq { @include hk-header("hdr-faq", 150px, 24%, 50% 50%, 0.7); }
+.hk-hdr--changelog { @include hk-header("hdr-changelog", 160px, 26%, 50% 50%, 0.6); }
+.hk-hdr--404 { @include hk-header("hdr-404", 260px, 42%, 50% 40%, 0.7); }
+
+/* footer: one quiet artwork credit, placed after the copyright line */
+.page__footer footer { display: flex; flex-direction: column; }
+.page__footer .hk-art-credit { order: 3; margin: 0.4em 0 0; font-size: 0.7em; color: $hk-muted; }
 
 /* home hero: the Feral illustration behind the wordmark, faded into the page colour at the sides and bottom */
 .hk-hero.hk-hero--art { padding: 272px 1em 0; border-bottom: 0; background: none; isolation: isolate; }
@@ -199,6 +236,5 @@ $hk-rule: linear-gradient(90deg, rgba(149, 105, 229, 0) 0%, rgba(149, 105, 229, 
   .hk-hero__wordmark { width: 300px; }
   .page__content .hk-hero__eyebrow { letter-spacing: 0.22em; }
   .hk-art .page__inner-wrap > header { min-height: 7rem; padding: 1rem 1rem 0.9rem; }
-  .hk-art .page__inner-wrap > header::before { width: 72%; opacity: 0.5; }
-  .hk-art--quiet .page__inner-wrap > header::before { opacity: 0.32; }
+  .hk-art.hk-art--quiet .page__inner-wrap > header { min-height: 6rem; }
 }
