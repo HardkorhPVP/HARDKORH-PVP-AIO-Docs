@@ -11,14 +11,16 @@ subtitle: "Intelligent Feral Druid PvP"
 name: "HardkorhPVP"
 description: "Documentation for HARDKORH PVP AIO v1.0.0: intelligent Feral Druid PvP for World of Warcraft: Midnight on Project Sylvanas."
 copyright: "HardkorhPVP"
+# The footer copyright name links here (the theme's default is site.url, the organization root, which has no site).
+copyright_url: "https://hardkorhpvp.github.io/HARDKORH-PVP-AIO-Docs/"
 masthead_title: "HARDKORH PVP AIO"
 # Masthead brand: the HARDKORH PVP AIO wordmark image (its alt text is masthead_title); the text title is hidden in main.scss.
 logo: "/assets/images/brand/hardkorh-wordmark.png"
 
-# The public address is not confirmed yet. Both stay empty for local preview; set them once the
-# GitHub Pages site exists (see README.md). Every internal link uses relative_url, so nothing else changes.
-url: ""
-baseurl: ""
+# GitHub Pages project site of HardkorhPVP/HARDKORH-PVP-AIO-Docs. Every internal link uses relative_url / absolute_url;
+# local preview serves the site under the same /HARDKORH-PVP-AIO-Docs/ path.
+url: "https://hardkorhpvp.github.io"
+baseurl: "/HARDKORH-PVP-AIO-Docs"
 
 breadcrumbs: false
 search: true
