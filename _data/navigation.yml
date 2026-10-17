@@ -1,0 +1,59 @@
+# Masthead (top) navigation
+main:
+  - title: "Getting Started"
+    url: /getting-started/requirements/
+  - title: "HARDKORH"
+    url: /hardkorh/settings/
+  - title: "Feral Druid"
+    url: /feral/required-talents/
+  - title: "Support"
+    url: /support/troubleshooting/
+  - title: "Discord"
+    url: https://discord.gg/sv2WNwk2WZ
+
+# Sidebar navigation on every documentation page
+docs:
+  - title: "Getting Started"
+    children:
+      - title: "Requirements"
+        url: /getting-started/requirements/
+      - title: "Installation"
+        url: /getting-started/installation/
+      - title: "First Launch"
+        url: /getting-started/first-launch/
+      - title: "Keybinds"
+        url: /getting-started/keybinds/
+  - title: "HARDKORH"
+    children:
+      - title: "Settings"
+        url: /hardkorh/settings/
+      - title: "KORHVISION"
+        url: /hardkorh/korhvision/
+      - title: "KORHSIGHT - Targeting"
+        url: /hardkorh/korhsight/
+      - title: "KORHTRAP - Crowd Control"
+        url: /hardkorh/korhtrap/
+      - title: "KORHSHIELD - Defensives"
+        url: /hardkorh/korhshield/
+      - title: "Arena Burst"
+        url: /hardkorh/arena-burst/
+  - title: "Feral Druid"
+    children:
+      - title: "Required Talents"
+        url: /feral/required-talents/
+      - title: "Gear & Stats"
+        url: /feral/gear-and-stats/
+      - title: "Arena & Solo Shuffle"
+        url: /feral/arena-and-solo-shuffle/
+      - title: "Battlegrounds"
+        url: /feral/battlegrounds/
+      - title: "PvE"
+        url: /feral/pve/
+  - title: "Support"
+    children:
+      - title: "Troubleshooting"
+        url: /support/troubleshooting/
+      - title: "FAQ"
+        url: /support/faq/
+      - title: "Changelog"
+        url: /support/changelog/

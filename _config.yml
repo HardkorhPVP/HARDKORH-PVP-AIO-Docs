@@ -1,0 +1,82 @@
+# HARDKORH PVP AIO - public product documentation
+# Jekyll + Minimal Mistakes as a GitHub Pages remote theme (no theme source is copied into this repository).
+
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
+minimal_mistakes_skin: "dark"
+
+locale: "en-US"
+title: "HARDKORH PVP AIO"
+title_separator: "|"
+subtitle: "Intelligent Feral Druid PvP"
+name: "HardkorhPVP"
+description: "Documentation for HARDKORH PVP AIO v1.0.0: intelligent Feral Druid PvP for World of Warcraft: Midnight on Project Sylvanas."
+copyright: "HardkorhPVP"
+masthead_title: "HARDKORH PVP AIO"
+
+# The public address is not confirmed yet. Both stay empty for local preview; set them once the
+# GitHub Pages site exists (see README.md). Every internal link uses relative_url, so nothing else changes.
+url: ""
+baseurl: ""
+
+breadcrumbs: false
+search: true
+search_full_content: true
+search_provider: lunr
+
+# Product documentation, not a blog: no feeds, comments, analytics, sharing, dates or author profile.
+atom_feed:
+  hide: true
+comments:
+  provider: false
+analytics:
+  provider: false
+
+og_image: "/assets/images/brand/hardkorh-banner-1200x300.png"
+
+footer:
+  links:
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/sv2WNwk2WZ"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 2..3
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+include:
+  - _pages
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - .gitignore
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      show_date: false
+      toc: false
+      sidebar:
+        nav: "docs"

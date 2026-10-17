@@ -1,0 +1,133 @@
+---
+# Minimal Mistakes main stylesheet entry point (documented customization: this file replaces the theme's own
+# assets/css/main.scss). Only the HARDKORH palette and a few components are defined here; the theme itself is
+# imported from the remote theme, not copied.
+---
+
+@charset "utf-8";
+
+/* ------------------------------------------------------------------ HARDKORH palette */
+/* Set before the skin import so they replace the skin's !default values. */
+$hk-black: #0b0910;
+$hk-surface: #15111f;
+$hk-surface-2: #1d1730;
+$hk-line: #2f2645;
+$hk-purple: #9569e5;
+$hk-purple-hi: #b98cff;
+$hk-purple-soft: #d6c2ff;
+$hk-text: #e9e4f3;
+$hk-muted: #a59cba;
+$hk-green: #5fd68f;
+$hk-amber: #ffc25a;
+$hk-red: #ff6b6b;
+
+$background-color: $hk-black;
+$text-color: $hk-text;
+$primary-color: $hk-purple;
+$border-color: $hk-line;
+$code-background-color: #181425;
+$code-background-color-dark: #110e1a;
+$form-background-color: $hk-surface;
+$footer-background-color: #08070c;
+$link-color: $hk-purple-hi;
+$link-color-hover: $hk-purple-soft;
+$link-color-visited: $hk-purple-hi;
+$masthead-link-color: #f4f1fb;
+$masthead-link-color-hover: $hk-purple-hi;
+$navicon-link-color-hover: $hk-purple-hi;
+$success-color: $hk-green;
+$warning-color: $hk-amber;
+$danger-color: $hk-red;
+$info-color: $hk-purple-hi;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ------------------------------------------------------------------ base */
+body { background: $hk-black; }
+h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
+.page__content h2 { border-bottom: 1px solid $hk-line; padding-bottom: 0.3em; }
+.page__content h2::before { content: ""; display: inline-block; width: 4px; height: 0.9em; margin-right: 0.45em; border-radius: 2px; background: $hk-purple; vertical-align: -0.08em; }
+.page__content p, .page__content li { color: $hk-text; }
+.page__lead, .page__meta, figcaption, .hk-muted { color: $hk-muted; }
+
+/* masthead + navigation accents */
+.masthead { background: rgba(11, 9, 16, 0.96); border-bottom: 1px solid $hk-line; }
+.masthead__menu-item a { font-weight: 600; letter-spacing: 0.02em; }
+.site-title { color: #ffffff; letter-spacing: 0.06em; }
+.greedy-nav { background: transparent; }
+.greedy-nav a:hover, .greedy-nav .visible-links a::before { background: $hk-purple; }
+.nav__list .nav__title, .nav__list .nav__sub-title { color: #ffffff; border-bottom: 1px solid $hk-line; }
+.nav__list .nav__items a { color: $hk-muted; }
+.nav__list .nav__items a:hover, .nav__list .nav__items .active { color: $hk-purple-hi; font-weight: 600; }
+
+/* tables */
+.page__content table { display: table; width: 100%; border: 1px solid $hk-line; }
+.page__content th { background: $hk-surface-2; color: #ffffff; border-color: $hk-line; }
+.page__content td { border-color: $hk-line; vertical-align: top; }
+.page__content tbody tr:nth-child(even) { background: rgba(149, 105, 229, 0.05); }
+
+/* buttons */
+.btn { border-radius: 6px; font-weight: 700; letter-spacing: 0.04em; }
+.btn--primary { background-color: $hk-purple; color: #ffffff; }
+.btn--primary:hover { background-color: $hk-purple-hi; color: #0b0910; }
+.btn--inverse { color: #ffffff; border: 1px solid $hk-purple-hi; background: transparent; }
+.btn--inverse:hover { background: rgba(185, 140, 255, 0.15); color: #ffffff; }
+.hk-btn-soon { display: inline-block; cursor: default; color: $hk-muted; border: 1px dashed $hk-line; background: $hk-surface; }
+.hk-btn-soon:hover { color: $hk-muted; background: $hk-surface; }
+
+/* callouts (Minimal Mistakes notices) */
+.notice--primary, .notice--info, .notice--success, .notice--warning, .notice--danger, .notice {
+  background: $hk-surface; color: $hk-text; border-radius: 8px; box-shadow: none; border: 1px solid $hk-line; border-left-width: 4px;
+  p, li { color: $hk-text; }
+  h4 { color: #ffffff; margin-top: 0; }
+}
+.notice--primary, .notice--info { border-left-color: $hk-purple; }
+.notice--success { border-left-color: $hk-green; }
+.notice--warning { border-left-color: $hk-amber; }
+.notice--danger { border-left-color: $hk-red; }
+
+/* code, including the talent import code */
+.page__content code { background: $code-background-color; color: $hk-purple-soft; }
+.hk-talent-code { background: $code-background-color-dark; border: 1px solid $hk-purple; border-radius: 8px; padding: 1em 1.1em; }
+.hk-talent-code code { display: block; background: transparent; color: #ffffff; white-space: pre-wrap; word-break: break-all; font-size: 0.85em; line-height: 1.6; user-select: all; }
+
+/* ratio-safe screenshots */
+.hk-figure { display: block; margin: 1.5em 0; }
+.hk-figure img { display: block; width: auto; max-width: 100%; height: auto; border: 1px solid $hk-line; border-radius: 8px; background: $hk-surface; }
+.hk-figure.hk-figure--small { max-width: 560px; }
+.hk-figure figcaption, .page__content figcaption { margin-top: 0.5em; font-size: 0.8em; font-family: $sans-serif; color: $hk-muted; }
+
+/* state pills (HUD vocabulary) */
+.hk-pill { display: inline-block; padding: 0.05em 0.6em; border-radius: 999px; font-size: 0.8em; font-weight: 700; letter-spacing: 0.04em; border: 1px solid currentColor; }
+.hk-pill--live { color: $hk-green; }
+.hk-pill--disabled { color: $hk-red; }
+.hk-pill--amber { color: $hk-amber; }
+.hk-pill--info { color: $hk-purple-hi; }
+
+/* numbered stages (Cyclone sequence) */
+.hk-stage { display: inline-block; min-width: 1.8em; padding: 0.1em 0.5em; margin-right: 0.4em; border-radius: 6px; background: $hk-purple; color: #ffffff; font-weight: 800; text-align: center; }
+
+/* ------------------------------------------------------------------ home page */
+.hk-hero { position: relative; margin: 0 auto 2.5em; padding: 2.2em 1em 2.6em; text-align: center; border-bottom: 1px solid $hk-line;
+  background: radial-gradient(ellipse at 50% 0%, rgba(123, 63, 228, 0.28), rgba(123, 63, 228, 0) 70%); }
+.hk-hero__banner { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto 1.4em; border-radius: 10px; border: 1px solid $hk-line; }
+.page__content .hk-hero__tagline, .hk-hero__tagline { margin: 0.2em 0 0.4em; font-size: 1.6em; font-weight: 800; color: $hk-purple-hi; letter-spacing: 0.04em; border: 0; }
+.hk-hero__tagline::before { display: none !important; }
+.hk-hero__copy { max-width: 46em; margin: 0 auto 1.4em; color: $hk-text; font-size: 1.05em; }
+.hk-hero__actions { display: flex; flex-wrap: wrap; gap: 0.7em; justify-content: center; }
+.hk-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.hk-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); gap: 1em; margin: 1.5em 0 2.5em; }
+.hk-card { display: block; padding: 1.2em 1.2em 1.1em; border: 1px solid $hk-line; border-radius: 10px; background: linear-gradient(160deg, $hk-surface-2, $hk-surface); text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease; }
+.hk-card:hover { border-color: $hk-purple; transform: translateY(-2px); }
+.hk-card__name { display: block; color: #ffffff; font-weight: 800; letter-spacing: 0.06em; font-size: 1.05em; }
+.hk-card__name::before { content: ""; display: inline-block; width: 0.55em; height: 0.55em; margin-right: 0.5em; border-radius: 2px; background: $hk-purple-hi; transform: rotate(45deg); }
+.hk-card__line { display: block; margin-top: 0.35em; color: $hk-muted; font-size: 0.92em; }
+.hk-section-title { text-align: center; color: #ffffff; margin-top: 1.5em; }
+
+@media (max-width: 600px) {
+  .hk-hero { padding: 1.2em 0.3em 1.8em; }
+  .hk-hero__tagline { font-size: 1.3em; }
+}
