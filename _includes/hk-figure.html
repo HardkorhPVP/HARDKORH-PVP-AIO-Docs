@@ -1,4 +1,4 @@
 <figure class="hk-figure{% if include.class %} {{ include.class }}{% endif %}">
-  <a href="{{ include.src | relative_url }}" title="Open full size"><img src="{{ include.src | relative_url }}" alt="{{ include.alt }}" width="{{ include.w }}" height="{{ include.h }}" loading="lazy"></a>
+  <a href="{{ include.src | relative_url }}" title="Open full size"><img src="{{ include.src | relative_url }}" alt="{{ include.alt }}" width="{{ include.w }}" height="{{ include.h }}" style="width: {{ include.w | plus: 2 }}px" loading="lazy"></a>
   {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>

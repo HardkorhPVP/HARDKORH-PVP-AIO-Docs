@@ -12,6 +12,8 @@ name: "HardkorhPVP"
 description: "Documentation for HARDKORH PVP AIO v1.0.0: intelligent Feral Druid PvP for World of Warcraft: Midnight on Project Sylvanas."
 copyright: "HardkorhPVP"
 masthead_title: "HARDKORH PVP AIO"
+# Masthead brand: the HARDKORH PVP AIO wordmark image (its alt text is masthead_title); the text title is hidden in main.scss.
+logo: "/assets/images/brand/hardkorh-wordmark.png"
 
 # The public address is not confirmed yet. Both stay empty for local preview; set them once the
 # GitHub Pages site exists (see README.md). Every internal link uses relative_url, so nothing else changes.
@@ -80,3 +82,29 @@ defaults:
       toc: false
       sidebar:
         nav: "docs"
+  # Page atmosphere (decorative only). Each class selects a CSS-background treatment for the page title card in
+  # assets/css/main.scss; page content and the real screenshots are unchanged. Pages not listed keep the plain title.
+  - scope: { path: "_pages/feral-required-talents.md" }
+    values: { classes: [hk-art, hk-art--feral] }
+  - scope: { path: "_pages/feral-gear-and-stats.md" }
+    values: { classes: [hk-art, hk-art--feral, hk-art--right, hk-art--quiet] }
+  - scope: { path: "_pages/feral-pve.md" }
+    values: { classes: [hk-art, hk-art--feral, hk-art--right, hk-art--quiet] }
+  - scope: { path: "_pages/hardkorh-korhshield.md" }
+    values: { classes: [hk-art, hk-art--feral, hk-art--left] }
+  - scope: { path: "_pages/404.md" }
+    values: { classes: [hk-art, hk-art--feral] }
+  - scope: { path: "_pages/feral-battlegrounds.md" }
+    values: { classes: [hk-art, hk-art--battleground] }
+  - scope: { path: "_pages/feral-arena-and-solo-shuffle.md" }
+    values: { classes: [hk-art, hk-art--arena] }
+  - scope: { path: "_pages/hardkorh-korhsight.md" }
+    values: { classes: [hk-art, hk-art--arena] }
+  - scope: { path: "_pages/hardkorh-korhtrap.md" }
+    values: { classes: [hk-art, hk-art--arena] }
+  - scope: { path: "_pages/hardkorh-arena-burst.md" }
+    values: { classes: [hk-art, hk-art--arena] }
+  - scope: { path: "_pages/hardkorh-korhvision.md" }
+    values: { classes: [hk-orn] }
+  - scope: { path: "_pages/hardkorh-settings.md" }
+    values: { classes: [hk-orn] }

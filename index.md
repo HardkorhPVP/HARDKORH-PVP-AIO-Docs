@@ -5,9 +5,11 @@ permalink: /
 excerpt: "Intelligent Feral Druid PvP for World of Warcraft: Midnight on Project Sylvanas."
 ---
 
-<section class="hk-hero">
+<section class="hk-hero hk-hero--art">
   <h1 class="hk-sr-only">HARDKORH PVP AIO</h1>
-  <img class="hk-hero__banner" src="{{ '/assets/images/brand/hardkorh-banner-1200x300.png' | relative_url }}" alt="HARDKORH PVP AIO - Feral Druid PvP - v1.0.0" width="1200" height="300">
+  <div class="hk-hero__art" aria-hidden="true"></div>
+  <img class="hk-hero__wordmark" src="{{ '/assets/images/brand/hardkorh-wordmark-large.webp' | relative_url }}" alt="" width="861" height="288">
+  <p class="hk-hero__eyebrow">FERAL DRUID PVP <span class="hk-pill hk-pill--info">v1.0.0</span></p>
   <p class="hk-hero__tagline">Intelligent Feral Druid PvP</p>
   <p class="hk-hero__copy">HARDKORH runs your Feral rotation, holds one validated kill target, plans crowd control on the enemy healer, layers your defensives and coordinates your burst, and KORHVISION shows all of it on a compact live combat HUD. Movement, positioning and strategy stay in your hands.</p>
   <div class="hk-hero__actions">

@@ -52,7 +52,7 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 .page__lead, .page__meta, figcaption, .hk-muted { color: $hk-muted; }
 
 /* masthead + navigation accents */
-.masthead { background: rgba(11, 9, 16, 0.96); border-bottom: 1px solid $hk-line; }
+.masthead { background: rgba(11, 9, 16, 0.96); }
 .masthead__menu-item a { font-weight: 600; letter-spacing: 0.02em; }
 .site-title { color: #ffffff; letter-spacing: 0.06em; }
 .greedy-nav { background: transparent; }
@@ -92,7 +92,8 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 .hk-talent-code { background: $code-background-color-dark; border: 1px solid $hk-purple; border-radius: 8px; padding: 1em 1.1em; }
 .hk-talent-code code { display: block; background: transparent; color: #ffffff; white-space: pre-wrap; word-break: break-all; font-size: 0.85em; line-height: 1.6; user-select: all; }
 
-/* ratio-safe screenshots */
+/* ratio-safe screenshots: hk-figure.html sets each image's natural width (+ its 2px border) inline, capped by max-width, so the
+   box is reserved before the image loads (no layout jump) and the image is never shown larger than its natural size */
 .hk-figure { display: block; margin: 1.5em 0; }
 .hk-figure img { display: block; width: auto; max-width: 100%; height: auto; border: 1px solid $hk-line; border-radius: 8px; background: $hk-surface; }
 .hk-figure.hk-figure--small { max-width: 560px; }
@@ -111,7 +112,6 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 /* ------------------------------------------------------------------ home page */
 .hk-hero { position: relative; margin: 0 auto 2.5em; padding: 2.2em 1em 2.6em; text-align: center; border-bottom: 1px solid $hk-line;
   background: radial-gradient(ellipse at 50% 0%, rgba(123, 63, 228, 0.28), rgba(123, 63, 228, 0) 70%); }
-.hk-hero__banner { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto 1.4em; border-radius: 10px; border: 1px solid $hk-line; }
 .page__content .hk-hero__tagline, .hk-hero__tagline { margin: 0.2em 0 0.4em; font-size: 1.6em; font-weight: 800; color: $hk-purple-hi; letter-spacing: 0.04em; border: 0; }
 .hk-hero__tagline::before { display: none !important; }
 .hk-hero__copy { max-width: 46em; margin: 0 auto 1.4em; color: $hk-text; font-size: 1.05em; }
@@ -130,4 +130,75 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 @media (max-width: 600px) {
   .hk-hero { padding: 1.2em 0.3em 1.8em; }
   .hk-hero__tagline { font-size: 1.3em; }
+}
+
+/* ------------------------------------------------------------------ brand wordmark + illustrated atmosphere */
+/* The illustrations are brand atmosphere only. They are CSS backgrounds on the home hero and on the page title cards,
+   faded into the page colour, so they never sit behind body text, tables, code or the real screenshots, which stay
+   plain, unfiltered <img> figures. */
+$hk-rule: linear-gradient(90deg, rgba(149, 105, 229, 0) 0%, rgba(149, 105, 229, 0.6) 25%, rgba(95, 214, 143, 0.75) 50%, rgba(149, 105, 229, 0.6) 75%, rgba(149, 105, 229, 0) 100%);
+
+/* masthead: the wordmark image replaces the text site title, so the title text is not shown beside it */
+.masthead__inner-wrap { padding-top: 0.5em; padding-bottom: 0.5em; }
+.greedy-nav a.site-logo { display: flex; align-items: center; margin-inline-end: 1.5rem; }
+.site-logo img { display: block; width: 192px; height: 64px; max-height: none; }
+/* zero width as well: the theme's priority-nav script measures this hidden link (jQuery un-hides it to measure) */
+.greedy-nav a.site-title { display: none; width: 0; margin: 0; padding: 0; }
+
+/* ornamental rules: masthead, footer and page titles */
+.masthead { border-bottom: 1px solid transparent; border-image: $hk-rule 1; }
+.page__footer { border-top: 1px solid transparent; border-image: $hk-rule 1; }
+.page__inner-wrap > header { margin-bottom: 1.4em; }
+.page__inner-wrap > header::after { content: ""; display: block; width: 72px; height: 3px; margin-top: 0.6em; background: linear-gradient(90deg, $hk-purple, $hk-green);
+  -webkit-clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%); }
+
+/* page title cards: hk-art pages show one illustration masked into the right side; hk-orn pages get the frame only */
+.hk-art .page__inner-wrap > header, .hk-orn .page__inner-wrap > header {
+  position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 1.3rem 1.4rem 1.1rem; margin-bottom: 1.8rem; border: 1px solid $hk-line; border-radius: 10px;
+  background: linear-gradient(160deg, $hk-surface-2 0%, $hk-surface 45%, $hk-black 100%);
+}
+.hk-art .page__inner-wrap > header { min-height: 9.5rem; }
+.hk-art .page__title, .hk-orn .page__title { margin: 0; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85); }
+.hk-art .page__inner-wrap > header::before {
+  content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; width: 64%; pointer-events: none;
+  background-repeat: no-repeat; background-size: cover; background-position: 50% 40%; opacity: 0.75;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 35%, #000 75%);
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 35%, #000 75%);
+}
+.hk-art--feral .page__inner-wrap > header::before { background-image: url("../images/art/hk-art-feral.webp"); background-size: auto 140%; }
+.hk-art--feral.hk-art--left .page__inner-wrap > header::before { background-position: 0% 40%; }
+.hk-art--feral.hk-art--right .page__inner-wrap > header::before { background-position: 100% 40%; }
+.hk-art--battleground .page__inner-wrap > header::before { width: 46%; background-image: url("../images/art/hk-art-battleground.webp"); background-position: 50% 12%; }
+.hk-art--arena .page__inner-wrap > header::before { width: 42%; background-image: url("../images/art/hk-art-stone.webp"); background-position: 50% 37%; }
+.hk-art--quiet .page__inner-wrap > header::before { opacity: 0.45; }
+
+/* home hero: the Feral illustration behind the wordmark, faded into the page colour at the sides and bottom */
+.hk-hero.hk-hero--art { padding: 272px 1em 0; border-bottom: 0; background: none; isolation: isolate; }
+.hk-hero__art {
+  position: absolute; z-index: -1; top: 0; left: 0; right: 0; height: 330px; pointer-events: none;
+  background-image: linear-gradient(180deg, rgba(11, 9, 16, 0.1) 0%, rgba(11, 9, 16, 0) 35%, rgba(11, 9, 16, 0.6) 75%, $hk-black 100%),
+    linear-gradient(90deg, $hk-black 0%, rgba(11, 9, 16, 0) 16%, rgba(11, 9, 16, 0) 84%, $hk-black 100%),
+    url("../images/art/hk-art-feral.webp");
+  background-repeat: no-repeat; background-position: 0 0, 0 0, 50% 0; background-size: 100% 100%, 100% 100%, auto 100%;
+}
+.hk-hero__wordmark { position: relative; display: block; width: 520px; max-width: 92%; height: auto; margin: 0 auto 0.4em; }
+.page__content .hk-hero__eyebrow { margin: 0 0 0.5em; color: $hk-muted; font-size: 0.78em; font-weight: 700; letter-spacing: 0.3em; }
+.hk-hero--art::after { content: ""; display: block; height: 1px; margin-top: 2.6em; background: $hk-rule; }
+
+@media (max-width: 1024px) {
+  .hk-hero__art { height: 270px; }
+  .hk-hero.hk-hero--art { padding-top: 222px; }
+  .hk-hero__wordmark { width: 440px; }
+}
+@media (max-width: 600px) {
+  .site-logo img { width: 138px; height: 46px; }
+  .greedy-nav a.site-logo { margin-inline-end: 0.5rem; }
+  .hk-hero.hk-hero--art { padding: 168px 0.3em 0; }
+  .hk-hero__art { height: 200px; }
+  .hk-hero__wordmark { width: 300px; }
+  .page__content .hk-hero__eyebrow { letter-spacing: 0.22em; }
+  .hk-art .page__inner-wrap > header { min-height: 7rem; padding: 1rem 1rem 0.9rem; }
+  .hk-art .page__inner-wrap > header::before { width: 72%; opacity: 0.5; }
+  .hk-art--quiet .page__inner-wrap > header::before { opacity: 0.32; }
 }
