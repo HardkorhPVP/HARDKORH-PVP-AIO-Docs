@@ -4,6 +4,18 @@ permalink: /support/changelog/
 excerpt: "Release history of HARDKORH PVP AIO."
 ---
 
+## Balance Druid
+
+Balance joins Feral in the **HARDKORH Druid** class pack: a complete Balance Druid PvP intelligence system.
+
+- **KORHTHINK** strategy: one strategic objective at a time (prepare, pressure, control setup, burst, kill window, defense, stabilize, recovery), with a policy for burst, Astral Power pooling, crowd control, interrupts and arbitration.
+- **Eclipse and burst**: the Midnight Eclipse model read live, a deliberate Solar / Lunar cycle with Total Eclipse handling, Astral Power management and charge-aware Incarnation.
+- **KORHTRAP** crowd control: offensive and defensive Cyclone with live Midnight diminishing returns, Root + Beam on the enemy healer, peels and Typhoon.
+- **KORHKICK** Solar Beam with its own interrupt target, cast-target awareness and recognition of proven crowd-control casts.
+- **KORHSHIELD** situation-aware defense: Barkskin, peels, Regrowth, Healthstone, an owned defensive Bear with Frenzied Regeneration and Heart of the Wild, and the return to Moonkin.
+- **KORHVISION** Balance HUD, KILL WINDOW and STABILIZING cues, control success notifications for observed outcomes, and the Cyclone hold-still cue.
+- One master switch (Balance Execution) with its own key, and a separate Balance settings page and diagnostic log.
+
 ## v1.0.0
 
 Initial Feral Druid PvP release for World of Warcraft: Midnight on Project Sylvanas.

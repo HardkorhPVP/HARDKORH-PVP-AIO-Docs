@@ -6,6 +6,8 @@ toc: true
 toc_label: "Settings cards"
 ---
 
+**Feral Druid.** This page covers the Feral settings page, **HARDKORH PVP AIO**. Balance has its own: [Balance Settings]({{ '/balance/settings/' | relative_url }}).
+
 The settings page follows one order from top to bottom, one section card at a time. Switches show ON or OFF directly; hover any option for a one-line description, and right-click it to reset it to its default. All read-only status lives at the very bottom, in SYSTEM STATUS and SUPPORT DIAGNOSTICS.
 
 {% include hk-figure.html src="/assets/images/screenshots/01-hardkorh-settings-overview.png" alt="The HARDKORH PVP AIO v1.0.0 settings page open in the Project Sylvanas menu, with the KORHVISION HUD reading LIVE on the left" w="1574" h="1304" caption="The HARDKORH PVP AIO v1.0.0 settings page with the KORHVISION HUD." %}

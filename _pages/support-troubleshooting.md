@@ -14,7 +14,16 @@ Questions and help: **🆘・support**. Reproducible bugs: **🐛・bug-fixes**.
 
 - Check SYSTEM STATUS at the bottom of the HARDKORH page, and the HUD badge. <span class="hk-pill hk-pill--disabled">DISABLED</span> means Enable Plugin is OFF; turn it on with the switch in GENERAL OPTIONS or its key.
 - After a settings reset, Enable Plugin is OFF again by design.
-- If the HARDKORH PVP AIO entry is missing completely, check that you are on a Druid in Feral specialization.
+- If the HARDKORH PVP AIO entry is missing completely, check that you are on a Druid in Feral or Balance specialization. On Balance the entry is **HARDKORH PVP AIO - BALANCE**.
+
+## Balance is not casting
+
+- Check the Balance HUD badge. <span class="hk-pill hk-pill--disabled">DISABLED</span> means Balance Execution is OFF: turn it on with its switch or the Balance Execution Key.
+- <span class="hk-pill hk-pill--amber">DRY RUN</span> means Balance Dry Run is ON: turn it OFF.
+- <span class="hk-pill hk-pill--disabled">UNAVAILABLE</span> means HARDKORH could not prove its execution layer safe at load and will not cast. Reload; if it stays, report it with the log.
+- Read the ACTION and REASON rows: a refused cast shows BLOCKED or FAILED with the game's reason.
+- HARDKORH does not shift you out of Cat Form, Travel Form or a Bear Form you entered yourself. Return to Moonkin or caster form.
+- Target a hostile unit; your current hostile target receives your damage. See [Balance Settings]({{ '/balance/settings/' | relative_url }}).
 
 ## The HUD is hidden
 
@@ -58,6 +67,8 @@ You moved during the cast. Stand still as soon as HOLD STILL appears. See the fo
 2. Reproduce the problem.
 3. Before you reload, copy the log file from your Project Sylvanas folder: `scripts_log/hardkorh/feral_pvp.log`. The file holds the latest session only, so a reload starts it over.
 
+On Balance, keep **Balance Diagnostic Logging** ON and copy `scripts_log/hardkorh/balance_pvp.log` instead.
+
 ## Resetting a single option
 
 Right-click the option to reset it, or set it back to its default: Enable Plugin OFF; Combat HUD ON; Diagnostics Panel OFF; HUD 1 / 28 / 100; Cyclone cue and sound ON; Interrupt At Cast 70%; Logging ON; Verbose OFF; Decision Engine ON; Dry Run OFF; keybinds unbound. See [Settings]({{ '/hardkorh/settings/' | relative_url }}).
@@ -69,4 +80,4 @@ Post it in **🐛・bug-fixes** on [Discord](https://discord.gg/sv2WNwk2WZ) with
 - what you expected and what happened, with the time;
 - the HUD rows at that moment (a screenshot is ideal) and the session controls you had on;
 - the log file from the same session;
-- the build line from the top of the HARDKORH page, for example **HARDKORH PVP AIO v1.0.0 - Feral M6.6**.
+- your specialization, and on Feral the build line from the top of the HARDKORH page, for example **HARDKORH PVP AIO v1.0.0 - Feral M6.6**.

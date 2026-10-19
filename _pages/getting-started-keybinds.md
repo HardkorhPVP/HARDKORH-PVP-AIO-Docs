@@ -4,7 +4,9 @@ permalink: /getting-started/keybinds/
 excerpt: "Four player keybinds, each toggling exactly one setting."
 ---
 
-HARDKORH has four independent player keybinds. Each one toggles exactly one setting, the same setting as its switch. Pressing the key and clicking the switch are interchangeable. All four work with the menu closed, and holding a key down does not repeat the toggle.
+HARDKORH Feral has four independent player keybinds. Each one toggles exactly one setting, the same setting as its switch. Pressing the key and clicking the switch are interchangeable. All four work with the menu closed, and holding a key down does not repeat the toggle.
+
+HARDKORH Balance has one keybind, the **Balance Execution Key**, which turns Balance Execution on or off. See [Balance Settings]({{ '/balance/settings/' | relative_url }}).
 
 | Keybind | Card | Toggles | Default |
 | --- | --- | --- | --- |

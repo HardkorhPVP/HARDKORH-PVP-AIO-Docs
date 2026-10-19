@@ -6,6 +6,8 @@ toc: true
 toc_label: "On this page"
 ---
 
+**Feral Druid.** For Balance defenses, see [Balance KORHSHIELD]({{ '/balance/korhshield/' | relative_url }}).
+
 Defensives always outrank damage. KORHSHIELD is fully automatic and has no settings of its own; the only related switch is the session-only **Strength of the Wild Live** in the KORHSHIELD card.
 
 ## The defensive layers

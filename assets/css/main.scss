@@ -54,6 +54,8 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 /* masthead + navigation accents */
 .masthead { background: rgba(11, 9, 16, 0.96); }
 .masthead__menu-item a { font-weight: 600; letter-spacing: 0.02em; }
+/* seven masthead entries: slightly tighter link spacing on desktop so Support and Discord stay visible at common widths */
+@media (min-width: 1024px) { .greedy-nav .visible-links a { margin: 0 0.75rem; } }
 .site-title { color: #ffffff; letter-spacing: 0.06em; }
 .greedy-nav { background: transparent; }
 .greedy-nav a:hover, .greedy-nav .visible-links a::before { background: $hk-purple; }
@@ -108,6 +110,41 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 
 /* numbered stages (Cyclone sequence) */
 .hk-stage { display: inline-block; min-width: 1.8em; padding: 0.1em 0.5em; margin-right: 0.4em; border-radius: 6px; background: $hk-purple; color: #ffffff; font-weight: 800; text-align: center; }
+
+/* status vocabulary for class packs and the roadmap: DONE = green, PLANNED = muted */
+.hk-pill--planned { color: $hk-muted; }
+
+/* class-pack status board: one class, its specializations and each one's status (home, platform, roadmap) */
+.hk-pack { margin: 1.5em 0 2.5em; padding: 1.1em 1.2em 1.2em; border: 1px solid $hk-line; border-radius: 10px; background: linear-gradient(160deg, $hk-surface-2, $hk-surface); }
+.hk-pack__title { display: block; margin: 0 0 0.9em; text-align: center; color: #ffffff; font-weight: 800; letter-spacing: 0.3em; font-size: 0.95em; }
+.hk-pack__specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(10em, 1fr)); gap: 0.8em; }
+.hk-spec { display: flex; flex-direction: column; align-items: center; gap: 0.4em; padding: 0.9em 0.6em; border: 1px solid $hk-line; border-radius: 8px; background: rgba(11, 9, 16, 0.55); text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease; }
+a.hk-spec:hover { border-color: $hk-purple; transform: translateY(-2px); }
+.hk-spec__name { color: #ffffff; font-weight: 800; letter-spacing: 0.14em; }
+.hk-spec__state { display: inline-block; padding: 0.05em 0.7em; border-radius: 999px; border: 1px solid currentColor; font-size: 0.78em; font-weight: 700; letter-spacing: 0.08em; }
+.hk-spec--done { border-color: rgba(95, 214, 143, 0.45); }
+.hk-spec--done .hk-spec__state { color: $hk-green; }
+.hk-spec--planned .hk-spec__state { color: $hk-muted; }
+.hk-pack__note { display: block; margin-top: 0.9em; text-align: center; color: $hk-muted; font-size: 0.85em; }
+
+/* roadmap: one card per class, one row per specialization */
+.hk-roadmap { display: grid; grid-template-columns: repeat(auto-fill, minmax(13em, 1fr)); gap: 1em; margin: 1.5em 0 2em; }
+.hk-class { padding: 0.9em 1.1em 0.7em; border: 1px solid $hk-line; border-radius: 10px; background: linear-gradient(160deg, $hk-surface-2, $hk-surface); }
+.hk-class--active { border-color: $hk-purple; }
+.page__content .hk-class__name { margin: 0 0 0.5em; padding: 0; border: 0; font-size: 1em; letter-spacing: 0.12em; text-transform: uppercase; color: #ffffff; }
+.page__content ul.hk-class__specs { list-style: none; margin: 0; padding: 0; }
+.page__content .hk-class__specs li { display: flex; justify-content: space-between; align-items: center; gap: 0.6em; margin: 0; padding: 0.4em 0; border-top: 1px solid $hk-line; }
+.page__content .hk-class__specs li:first-child { border-top: 0; }
+
+/* step chains: how a decision escalates or builds (e.g. PRESSURE -> BARKSKIN -> ...); wraps on narrow screens */
+.page__content ol.hk-flow { display: flex; flex-wrap: wrap; align-items: center; row-gap: 0.55em; list-style: none; margin: 1.2em 0 1.6em; padding: 0; }
+.page__content .hk-flow li { display: inline-flex; align-items: center; margin: 0; font-size: 0.8em; font-weight: 700; letter-spacing: 0.06em; color: #ffffff; }
+.hk-flow li span { padding: 0.3em 0.75em; border: 1px solid $hk-line; border-radius: 999px; background: $hk-surface-2; white-space: nowrap; }
+.hk-flow li + li::before { content: "\2192"; margin: 0 0.45em; color: $hk-purple-hi; font-weight: 800; }
+.hk-flow--defense li span { border-color: rgba(255, 107, 107, 0.4); }
+.hk-flow--burst li span { border-color: rgba(95, 214, 143, 0.4); }
+.hk-flow li.hk-flow__goal span { background: $hk-purple; border-color: $hk-purple; }
 
 /* ------------------------------------------------------------------ home page */
 .hk-hero { position: relative; margin: 0 auto 2.5em; padding: 2.2em 1em 2.6em; text-align: center; border-bottom: 1px solid $hk-line;
@@ -200,6 +237,18 @@ $hk-rule: linear-gradient(90deg, rgba(149, 105, 229, 0) 0%, rgba(149, 105, 229, 
 .hk-hdr--arena-solo { @include hk-header("hk-art-arena", 1200px, 76%, 50% 52%, 0.8, ""); }
 .hk-hdr--battlegrounds { @include hk-header("hdr-battlegrounds", 298px, 46%, 50% 12%, 0.75); }
 .hk-hdr--pve { @include hk-header("hdr-pve", 158px, 25%, 50% 42%, 0.6); }
+/* HARDKORH platform and roadmap (crops of the HARDKORH roadmap artwork) */
+.hk-hdr--platform { @include hk-header("hdr-platform", 178px, 40%, 50% 55%, 0.7); }
+.hk-hdr--roadmap { @include hk-header("hdr-roadmap", 172px, 40%, 50% 50%, 0.75); }
+/* Balance Druid (Moonkin, moon and night-sky crops of the HARDKORH roadmap artwork) */
+.hk-hdr--balance { @include hk-header("hdr-balance", 206px, 46%, 50% 35%, 0.8); }
+.hk-hdr--balance-korhthink { @include hk-header("hdr-balance-korhthink", 160px, 38%, 50% 40%, 0.75); }
+.hk-hdr--balance-eclipse { @include hk-header("hdr-balance-eclipse", 152px, 36%, 50% 50%, 0.8); }
+.hk-hdr--balance-control { @include hk-header("hdr-balance-control", 146px, 34%, 50% 45%, 0.75); }
+.hk-hdr--balance-korhshield { @include hk-header("hdr-balance-korhshield", 285px, 52%, 50% 40%, 0.7); }
+.hk-hdr--balance-korhvision { @include hk-header("hdr-balance-korhvision", 145px, 30%, 50% 45%, 0.7); }
+.hk-hdr--balance-settings { @include hk-header("hdr-balance-settings", 148px, 28%, 50% 50%, 0.72); }
+.hk-hdr--balance-scope { @include hk-header("hdr-balance-scope", 320px, 44%, 50% 50%, 0.6); }
 /* Support and 404 */
 .hk-hdr--troubleshooting { @include hk-header("hdr-troubleshooting", 230px, 36%, 50% 35%, 0.6); }
 .hk-hdr--faq { @include hk-header("hdr-faq", 150px, 24%, 50% 50%, 0.7); }

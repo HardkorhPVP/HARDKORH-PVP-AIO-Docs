@@ -6,6 +6,8 @@ toc: true
 toc_label: "On this page"
 ---
 
+**Feral Druid.** For Balance crowd control and Solar Beam, see [Balance Control & KORHKICK]({{ '/balance/control-and-korhkick/' | relative_url }}).
+
 KORHTRAP picks one **CONTROL** target and asks whether hard crowd control on it is useful and safe right now. Controlling the healer is what turns pressure into kills: KORHTRAP aims Incapacitating Roar and Cyclone at the healer while your damage stays on the KILL.
 
 <div class="notice--info" markdown="1">

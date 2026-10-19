@@ -4,6 +4,8 @@ permalink: /getting-started/first-launch/
 excerpt: "Open HARDKORH, assign your keys, review the settings, enable the plugin and read KORHVISION."
 ---
 
+This walkthrough is for Feral. On a Balance Druid, follow [getting started on Balance]({{ '/balance/#getting-started-on-balance' | relative_url }}).
+
 ## 1. Open HARDKORH PVP AIO
 
 Log in on your Feral Druid and open the Project Sylvanas menu, then open **HARDKORH PVP AIO**. Every setting lives on this one page as a stack of section cards: GENERAL OPTIONS, KORHVISION, KORHSIGHT, KORHTRAP, BURST, KORHSHIELD, KORHKICK, LOGGING & SUPPORT and ADVANCED, with SYSTEM STATUS and SUPPORT DIAGNOSTICS at the bottom. Just scroll down; there are no internal pages to switch between.

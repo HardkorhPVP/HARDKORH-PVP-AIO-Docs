@@ -7,9 +7,9 @@ minimal_mistakes_skin: "dark"
 locale: "en-US"
 title: "HARDKORH PVP AIO"
 title_separator: "|"
-subtitle: "Intelligent Feral Druid PvP"
+subtitle: "Intelligent PvP for World of Warcraft"
 name: "HardkorhPVP"
-description: "Documentation for HARDKORH PVP AIO v1.0.0: intelligent Feral Druid PvP for World of Warcraft: Midnight on Project Sylvanas."
+description: "Documentation for HARDKORH PVP AIO: the HARDKORH PvP intelligence platform and its class packs for World of Warcraft: Midnight on Project Sylvanas. HARDKORH Druid: Feral and Balance."
 copyright: "HardkorhPVP"
 # The footer copyright name links here (the theme's default is site.url, the organization root, which has no site).
 copyright_url: "https://hardkorhpvp.github.io/HARDKORH-PVP-AIO-Docs/"
@@ -118,6 +118,26 @@ defaults:
     values: { classes: [hk-art, hk-hdr--battlegrounds] }
   - scope: { path: "_pages/feral-pve.md" }
     values: { classes: [hk-art, hk-hdr--pve, hk-art--quiet] }
+  - scope: { path: "_pages/hardkorh-platform.md" }
+    values: { classes: [hk-art, hk-hdr--platform] }
+  - scope: { path: "_pages/roadmap.md" }
+    values: { classes: [hk-art, hk-hdr--roadmap] }
+  - scope: { path: "_pages/balance-overview.md" }
+    values: { classes: [hk-art, hk-hdr--balance] }
+  - scope: { path: "_pages/balance-korhthink.md" }
+    values: { classes: [hk-art, hk-hdr--balance-korhthink] }
+  - scope: { path: "_pages/balance-eclipse-and-burst.md" }
+    values: { classes: [hk-art, hk-hdr--balance-eclipse] }
+  - scope: { path: "_pages/balance-control-and-korhkick.md" }
+    values: { classes: [hk-art, hk-hdr--balance-control] }
+  - scope: { path: "_pages/balance-korhshield.md" }
+    values: { classes: [hk-art, hk-hdr--balance-korhshield] }
+  - scope: { path: "_pages/balance-korhvision.md" }
+    values: { classes: [hk-art, hk-hdr--balance-korhvision, hk-art--quiet] }
+  - scope: { path: "_pages/balance-settings.md" }
+    values: { classes: [hk-art, hk-hdr--balance-settings, hk-art--quiet] }
+  - scope: { path: "_pages/balance-scope-and-limits.md" }
+    values: { classes: [hk-art, hk-hdr--balance-scope, hk-art--quiet] }
   - scope: { path: "_pages/support-troubleshooting.md" }
     values: { classes: [hk-art, hk-hdr--troubleshooting, hk-art--quiet] }
   - scope: { path: "_pages/support-faq.md" }

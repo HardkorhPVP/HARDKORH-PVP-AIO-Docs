@@ -4,6 +4,8 @@ permalink: /hardkorh/korhsight/
 excerpt: "One validated KILL target that keeps your pressure where you put it."
 ---
 
+**Feral Druid.** On Balance, your current target is the KILL target; see [Balance control]({{ '/balance/control-and-korhkick/#three-targets-kept-separate' | relative_url }}).
+
 KORHSIGHT picks and keeps the **KILL** target: the enemy player your damage goes to. It never changes your WoW target or focus.
 
 ## The KILL target

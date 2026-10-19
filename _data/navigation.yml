@@ -3,9 +3,13 @@ main:
   - title: "Getting Started"
     url: /getting-started/requirements/
   - title: "HARDKORH"
-    url: /hardkorh/settings/
-  - title: "Feral Druid"
+    url: /hardkorh/platform/
+  - title: "Feral"
     url: /feral/required-talents/
+  - title: "Balance"
+    url: /balance/
+  - title: "Roadmap"
+    url: /roadmap/
   - title: "Support"
     url: /support/troubleshooting/
   - title: "Discord"
@@ -23,7 +27,14 @@ docs:
         url: /getting-started/first-launch/
       - title: "Keybinds"
         url: /getting-started/keybinds/
-  - title: "HARDKORH"
+  - title: "HARDKORH Platform"
+    children:
+      - title: "Platform Overview"
+        url: /hardkorh/platform/
+      - title: "Roadmap"
+        url: /roadmap/
+  # The Feral class-pack pages keep their original /hardkorh/ and /feral/ addresses.
+  - title: "Feral Druid"
     children:
       - title: "Settings"
         url: /hardkorh/settings/
@@ -37,8 +48,6 @@ docs:
         url: /hardkorh/korhshield/
       - title: "Arena Burst"
         url: /hardkorh/arena-burst/
-  - title: "Feral Druid"
-    children:
       - title: "Required Talents"
         url: /feral/required-talents/
       - title: "Gear & Stats"
@@ -49,6 +58,24 @@ docs:
         url: /feral/battlegrounds/
       - title: "PvE"
         url: /feral/pve/
+  - title: "Balance Druid"
+    children:
+      - title: "Balance Overview"
+        url: /balance/
+      - title: "KORHTHINK - Strategy"
+        url: /balance/korhthink/
+      - title: "Eclipse & Burst"
+        url: /balance/eclipse-and-burst/
+      - title: "Control & KORHKICK"
+        url: /balance/control-and-korhkick/
+      - title: "KORHSHIELD - Defensives"
+        url: /balance/korhshield/
+      - title: "KORHVISION - HUD & Cues"
+        url: /balance/korhvision/
+      - title: "Settings"
+        url: /balance/settings/
+      - title: "Scope & Limits"
+        url: /balance/scope-and-limits/
   - title: "Support"
     children:
       - title: "Troubleshooting"

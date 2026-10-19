@@ -1,7 +1,8 @@
 # HARDKORH PVP AIO - documentation site
 
-Public product documentation for **HARDKORH PVP AIO v1.0.0** (Feral Druid PvP, World of Warcraft: Midnight, Project Sylvanas),
-by HardkorhPVP. This repository holds documentation only: no plugin source, no logs, no private material.
+Public product documentation for **HARDKORH PVP AIO** (the HARDKORH PvP intelligence platform and its class packs; HARDKORH
+Druid: Feral and Balance; World of Warcraft: Midnight, Project Sylvanas), by HardkorhPVP. This repository holds documentation
+only: no plugin source, no logs, no private material.
 
 Built with [Jekyll](https://jekyllrb.com/) and the [Minimal Mistakes](https://mademistakes.com/work/jekyll-themes/minimal-mistakes/)
 theme, used as a GitHub Pages remote theme (`mmistakes/minimal-mistakes@4.28.1`). No theme source is copied into this repository;
@@ -13,7 +14,7 @@ the local customizations are `assets/css/main.scss`, `_includes/hk-figure.html` 
 | Path | Content |
 | --- | --- |
 | `index.md` | Home page (splash layout) |
-| `_pages/` | Documentation pages: Getting Started, HARDKORH, Feral Druid, Support |
+| `_pages/` | Documentation pages: Getting Started, HARDKORH Platform (overview, roadmap), Feral Druid, Balance Druid, Support |
 | `_data/navigation.yml` | Masthead and sidebar navigation |
 | `assets/css/main.scss` | HARDKORH palette and components on top of the Minimal Mistakes dark skin |
 | `assets/images/brand/` | Wordmark, Marketplace banner and detail art |

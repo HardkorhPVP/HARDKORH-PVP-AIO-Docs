@@ -6,6 +6,8 @@ toc: true
 toc_label: "On this page"
 ---
 
+**Feral Druid.** For Balance burst, see [Balance Eclipse & Burst]({{ '/balance/eclipse-and-burst/' | relative_url }}).
+
 The major cooldown is Incarnation when you have it learned, otherwise Berserk. In Arena, HARDKORH spends it only in an authorized kill window, and only while **Arena Burst** is ON.
 
 ## Turning it on

@@ -6,6 +6,8 @@ toc: true
 toc_label: "On this page"
 ---
 
+**Feral Druid.** For the Balance HUD and its cues, see [Balance KORHVISION]({{ '/balance/korhvision/' | relative_url }}).
+
 The Combat HUD is a compact on-screen window. It shows what HARDKORH sees and does. It is display only: it never casts, targets, moves or cancels anything, and combat is identical with it hidden.
 
 {% include hk-figure.html src="/assets/images/screenshots/04-korhvision-live.png" alt="The KORHVISION HUD reading LIVE out of combat: KILL, CONTROL and ACTION NONE, BURST READY, DEFENSIVE NONE 100%" w="364" h="256" class="hk-figure--small" caption="The Combat HUD in LIVE operation before a fight: nothing to act on yet, burst ready." %}
