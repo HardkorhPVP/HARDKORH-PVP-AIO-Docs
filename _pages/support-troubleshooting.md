@@ -80,4 +80,4 @@ Post it in **🐛・bug-fixes** on [Discord](https://discord.gg/sv2WNwk2WZ) with
 - what you expected and what happened, with the time;
 - the HUD rows at that moment (a screenshot is ideal) and the session controls you had on;
 - the log file from the same session;
-- your specialization, and on Feral the build line from the top of the HARDKORH page, for example **HARDKORH PVP AIO v1.0.0 - Feral M6.6**.
+- your specialization, and on Feral the build line from the top of the HARDKORH page, for example **HARDKORH PVP AIO v1.1.0 - Feral M6.6**.

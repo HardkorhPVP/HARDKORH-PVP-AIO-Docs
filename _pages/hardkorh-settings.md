@@ -38,7 +38,7 @@ Rows marked **VALIDATED** match the validated HARDKORH configuration used in liv
 
 ## GENERAL OPTIONS
 
-The first card. A short build line at the bottom identifies the installed version for support: **HARDKORH PVP AIO v1.0.0 - Feral M6.6**.
+The first card. A short build line at the bottom identifies the installed version for support: **HARDKORH PVP AIO v1.1.0 - Feral M6.6**.
 
 | Option | What it does | Recommended / default |
 | --- | --- | --- |

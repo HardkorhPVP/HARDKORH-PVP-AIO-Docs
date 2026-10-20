@@ -1,7 +1,7 @@
 ---
 title: "PvE"
 permalink: /feral/pve/
-excerpt: "HARDKORH v1.0.0 is PvP-first. What does and does not work outside PvP."
+excerpt: "HARDKORH v1.1.0 is PvP-first. What does and does not work outside PvP."
 ---
 
 <div class="notice--warning" markdown="1">
