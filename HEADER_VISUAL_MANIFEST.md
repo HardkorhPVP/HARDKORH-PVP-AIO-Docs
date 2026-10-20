@@ -9,7 +9,7 @@ pick a source region or focal subject that is not already listed here, then re-r
 ## Rules
 
 - Illustrations are decorative brand atmosphere only. They never show gameplay, game UI or HARDKORH data.
-- The 18 real screenshots in `assets/images/screenshots/` are the only evidence of HARDKORH behaviour. They are never filtered,
+- The 19 real screenshots in `assets/images/screenshots/` are the only evidence of HARDKORH behaviour. They are never filtered,
   overlaid, recoloured or used as header art.
 - Header art lives in CSS backgrounds. It never sits behind body text, tables, code or screenshots.
 - Each page loads only its own header image.
@@ -24,6 +24,7 @@ C2PA content credentials, where a master carries them, are not carried into the 
 | HARDKORH logo poster | 1672 × 941 | Panthers, moon, forest, waterfalls, fortress, banners, rune stone, braziers. All crops avoid the poster's lettering. |
 | HARDKORH arena master | 1536 × 1024 | Night-time stone PvP arena: towers, crest, portcullis gate, torches, banners, open floor, entry stairs. No text, no UI. |
 | HARDKORH roadmap artwork A | 1672 × 941 | Roadmap poster: Moonkin under a full moon, hilltop temple, night forest. Crops use only the illustrated margins: never the lettering, the roadmap table or the side panels. |
+| HARDKORH Balance poster | 1024 × 1536 | Balance marketing poster: antlered Moonkin, moon, rune-carved standing stones, crescent-and-antler talisman. Crops use only the illustrated areas: never the lettering, the ability-icon row, the panels or the quote. |
 | HARDKORH roadmap artwork B | 1536 × 1024 | Roadmap poster: antlered Moonkin with a cosmic orb, crescent moon, druid with a roaring bear, standing stones, sunset sky. Crops use only the illustrated margins: never the lettering, the roadmap table, the side panels, the castle or the faction banners. |
 
 ## Treatment
@@ -70,8 +71,15 @@ Region = crop box in master pixels (x, y, width × height). "Screenshots" = dist
 | Balance KORHVISION | Balance Druid | `art/headers/hdr-balance-korhvision.webp` | roadmap B 200, 304, 145 × 102 | 30% (162px) | 50% 45% | 0.7 | narrow | quiet | BD-DRUID-GLOWING-EYE | 0 | yes |
 | Balance Settings | Balance Druid | `art/headers/hdr-balance-settings.webp` | roadmap B 1040, 0, 148 × 100 | 28% (166px) | 50% 50% | 0.72 | narrow | quiet | BD-STARLIT-PINIONS | 0 | yes |
 | Balance Scope & Limits | Balance Druid | `art/headers/hdr-balance-scope.webp` | roadmap A 1138, 0, 320 × 112 | 44% (358px) | 50% 50% | 0.6 | standard | quiet | BD-NIGHT-CANOPY | 0 | yes |
+| Balance Talents & Build | Balance Druid | `art/headers/hdr-balance-talents.webp` | Balance poster 425, 792, 175 × 172 | 36% (196px) | 50% 30% | 0.8 | standard | full | BD-ANTLER-TALISMAN | 1 | yes |
+| Balance PvP Gear & Stats | Balance Druid | `art/headers/hdr-balance-gear.webp` | Balance poster 830, 140, 194 × 190 | 40% (217px) | 50% 40% | 0.75 | standard | full | BD-RUNE-STONES | 0 | yes |
 
-No two roadmap-artwork regions overlap. The Feral system pages keep their original headers and addresses; the sidebar now lists them
+No two roadmap-artwork regions overlap. The talisman crop stops below the poster's crescent, so the only crescent-moon header remains
+Balance Eclipse & Burst.
+
+Screenshot 19 (`19-balance-talent-tree.png`, 1603 × 854, Balance Talents & Build): the author's in-game talent window. Privacy edit:
+the loadout label in the loadout dropdown only (mean-colour cells, 10px, verified uniform; no talent node touched; every other pixel
+identical to the original). Cropped to drop the window title bar and close button, like Figure 10. The Feral system pages keep their original headers and addresses; the sidebar now lists them
 under Feral Druid.
 
 All assets are under `assets/images/`.
@@ -93,3 +101,11 @@ All assets are under `assets/images/`.
   page title.
 - Whole card: closest pair still 3.7 (PvE / FAQ), median 14.2. Art zone only: closest pair 8.0 (FAQ / Balance Settings, after
   raising Balance Settings from 0.6 to 0.72 opacity; 7.2 before), median 21.0. The two are a rune banner and a starlit wing.
+
+## Uniqueness check (with Balance Talents & Build and PvP Gear & Stats, 1440px)
+
+- 31 of 31 pages render a major header (at least 140px tall) and every header image loads.
+- 31 unique treatment combinations and 31 different source assets; every header capture is byte-unique, with and without the
+  page title.
+- Whole card: closest pair 3.7 (PvE / FAQ), median 14.1. Art zone only: closest pair 8.0 (FAQ / Balance Settings), median 21.0.
+  The two new headers (antler talisman, rune stones) are not among the closest pairs.

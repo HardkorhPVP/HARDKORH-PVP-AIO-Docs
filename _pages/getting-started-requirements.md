@@ -10,7 +10,7 @@ excerpt: "What you need before your first HARDKORH session."
 | Class and specialization | A **Druid in Feral or Balance specialization**. HARDKORH loads only for those two; on any other class or specialization it stays inactive. More classes are on the [roadmap]({{ '/roadmap/' | relative_url }}). |
 | Game | **World of Warcraft: Midnight**. This documentation covers World of Warcraft 12.1.5, Midnight Season 2. |
 | Platform | The **latest available Project Sylvanas**. Keep Project Sylvanas updated before using HARDKORH; no compatibility claim is made for older or outdated Project Sylvanas builds. |
-| Talents | Feral: the [required HARDKORH Feral talent build]({{ '/feral/required-talents/' | relative_url }}). Balance: see [abilities HARDKORH Balance can use]({{ '/balance/#abilities-hardkorh-balance-can-use' | relative_url }}). HARDKORH checks at runtime which abilities you have learned and never uses an ability you do not have. |
+| Talents | Feral: the [required HARDKORH Feral talent build]({{ '/feral/required-talents/' | relative_url }}). Balance: the [recommended HARDKORH Balance build]({{ '/balance/talents/' | relative_url }}) (not required). HARDKORH checks at runtime which abilities you have learned and never uses an ability you do not have. |
 
 ## Safe by default
 

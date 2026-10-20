@@ -26,7 +26,7 @@ excerpt: "Intelligent PvP for World of Warcraft: Midnight on Project Sylvanas. H
   <div class="hk-pack__specs">
     <a class="hk-spec hk-spec--done" href="{{ '/feral/required-talents/' | relative_url }}"><span class="hk-spec__name">FERAL</span><span class="hk-spec__state">DONE</span></a>
     <a class="hk-spec hk-spec--done" href="{{ '/balance/' | relative_url }}"><span class="hk-spec__name">BALANCE</span><span class="hk-spec__state">DONE</span></a>
-    <span class="hk-spec hk-spec--planned"><span class="hk-spec__name">RESTORATION</span><span class="hk-spec__state">PLANNED</span></span>
+    <span class="hk-spec hk-spec--planned"><span class="hk-spec__name">RESTORATION</span><span class="hk-spec__state">PLANNED (NEXT)</span></span>
   </div>
   <span class="hk-pack__note">More classes are on the <a href="{{ '/roadmap/' | relative_url }}">roadmap</a>. Damage and healing specializations only.</span>
 </div>

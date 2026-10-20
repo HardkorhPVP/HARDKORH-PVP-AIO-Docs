@@ -19,7 +19,7 @@ Classes are listed in roadmap order. No release dates are announced. HARDKORH bu
     <ul class="hk-class__specs">
       <li><a href="{{ '/feral/required-talents/' | relative_url }}">Feral</a><span class="hk-pill hk-pill--live">DONE</span></li>
       <li><a href="{{ '/balance/' | relative_url }}">Balance</a><span class="hk-pill hk-pill--live">DONE</span></li>
-      <li><span>Restoration <span class="hk-muted">(next)</span></span><span class="hk-pill hk-pill--planned">PLANNED</span></li>
+      <li><span>Restoration</span><span class="hk-pill hk-pill--planned">PLANNED (NEXT)</span></li>
     </ul>
   </section>
   <section class="hk-class">
@@ -94,6 +94,7 @@ Classes are listed in roadmap order. No release dates are announced. HARDKORH bu
     <h3 class="hk-class__name" id="demon-hunter">Demon Hunter</h3>
     <ul class="hk-class__specs">
       <li><span>Havoc</span><span class="hk-pill hk-pill--planned">PLANNED</span></li>
+      <li><span>Devourer</span><span class="hk-pill hk-pill--planned">PLANNED</span></li>
     </ul>
   </section>
   <section class="hk-class">
@@ -101,7 +102,6 @@ Classes are listed in roadmap order. No release dates are announced. HARDKORH bu
     <ul class="hk-class__specs">
       <li><span>Devastation</span><span class="hk-pill hk-pill--planned">PLANNED</span></li>
       <li><span>Preservation</span><span class="hk-pill hk-pill--planned">PLANNED</span></li>
-      <li><span>Augmentation</span><span class="hk-pill hk-pill--planned">PLANNED</span></li>
     </ul>
   </section>
   <section class="hk-class">

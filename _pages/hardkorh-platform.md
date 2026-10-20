@@ -13,7 +13,7 @@ HARDKORH is a PvP intelligence platform, not a rotation. One shared foundation o
   <div class="hk-pack__specs">
     <a class="hk-spec hk-spec--done" href="{{ '/feral/required-talents/' | relative_url }}"><span class="hk-spec__name">FERAL</span><span class="hk-spec__state">DONE</span></a>
     <a class="hk-spec hk-spec--done" href="{{ '/balance/' | relative_url }}"><span class="hk-spec__name">BALANCE</span><span class="hk-spec__state">DONE</span></a>
-    <span class="hk-spec hk-spec--planned"><span class="hk-spec__name">RESTORATION</span><span class="hk-spec__state">PLANNED</span></span>
+    <span class="hk-spec hk-spec--planned"><span class="hk-spec__name">RESTORATION</span><span class="hk-spec__state">PLANNED (NEXT)</span></span>
   </div>
   <span class="hk-pack__note">Every class and specialization on the way: <a href="{{ '/roadmap/' | relative_url }}">Roadmap</a></span>
 </div>
@@ -78,7 +78,7 @@ The subsystems are shared; how deeply each specialization uses them depends on t
 
 ## Class packs
 
-HARDKORH is organized as one shared platform plus class packs. A class pack covers one class and contains every HARDKORH specialization of that class: **HARDKORH Druid** contains Feral and Balance today, with Restoration planned. Only damage and healing specializations are built; tank specializations are not part of HARDKORH.
+HARDKORH is organized as one shared platform plus class packs. A class pack covers one class and contains every HARDKORH specialization of that class: **HARDKORH Druid** contains Feral and Balance today, with Restoration planned next. Only damage and healing specializations are built; tank specializations are not part of HARDKORH.
 
 **HARDKORH PVP AIO** brings together every available class pack. Pricing and availability of individual class packs will be announced when they are finalized.
 

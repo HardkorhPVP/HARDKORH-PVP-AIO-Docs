@@ -15,6 +15,7 @@ Balance joins Feral in the **HARDKORH Druid** class pack: a complete Balance Dru
 - **KORHSHIELD** situation-aware defense: Barkskin, peels, Regrowth, Healthstone, an owned defensive Bear with Frenzied Regeneration and Heart of the Wild, and the return to Moonkin.
 - **KORHVISION** Balance HUD, KILL WINDOW and STABILIZING cues, control success notifications for observed outcomes, and the Cyclone hold-still cue.
 - One master switch (Balance Execution) with its own key, and a separate Balance settings page and diagnostic log.
+- Recommended Balance PvP talent build (Keeper of the Grove) and PvP gearing plan for World of Warcraft 12.1.5, Midnight Season 2.
 
 ## v1.0.0
 

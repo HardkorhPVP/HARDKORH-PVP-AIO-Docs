@@ -134,6 +134,10 @@ defaults:
     values: { classes: [hk-art, hk-hdr--balance-korhshield] }
   - scope: { path: "_pages/balance-korhvision.md" }
     values: { classes: [hk-art, hk-hdr--balance-korhvision, hk-art--quiet] }
+  - scope: { path: "_pages/balance-talents.md" }
+    values: { classes: [hk-art, hk-hdr--balance-talents] }
+  - scope: { path: "_pages/balance-gear-and-stats.md" }
+    values: { classes: [hk-art, hk-hdr--balance-gear] }
   - scope: { path: "_pages/balance-settings.md" }
     values: { classes: [hk-art, hk-hdr--balance-settings, hk-art--quiet] }
   - scope: { path: "_pages/balance-scope-and-limits.md" }

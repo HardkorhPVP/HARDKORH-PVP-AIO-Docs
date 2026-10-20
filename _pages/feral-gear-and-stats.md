@@ -83,6 +83,7 @@ One recommended equipment set for this season. A slot left "-" has no further de
 | Trinket 1 | Galactic Gladiator's Medallion | Conquest | - | - |
 | Trinket 2 | Galactic Gladiator's Insignia of Alacrity | Conquest | - | - |
 | Main hand | Venomous Gladiator's Spike | Conquest | - | Acuity of the Ren'dorei |
+{: .hk-table--wide}
 
 Head, shoulders, chest and legs are the four class-set pieces, so this table completes the 4-piece set.
 

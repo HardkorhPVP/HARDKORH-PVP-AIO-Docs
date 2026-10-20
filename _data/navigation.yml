@@ -72,6 +72,10 @@ docs:
         url: /balance/korhshield/
       - title: "KORHVISION - HUD & Cues"
         url: /balance/korhvision/
+      - title: "Talents & Build"
+        url: /balance/talents/
+      - title: "PvP Gear & Stats"
+        url: /balance/gear-and-stats/
       - title: "Settings"
         url: /balance/settings/
       - title: "Scope & Limits"

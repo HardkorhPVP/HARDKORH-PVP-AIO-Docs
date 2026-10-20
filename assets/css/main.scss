@@ -68,6 +68,11 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 .page__content th { background: $hk-surface-2; color: #ffffff; border-color: $hk-line; }
 .page__content td { border-color: $hk-line; vertical-align: top; }
 .page__content tbody tr:nth-child(even) { background: rgba(149, 105, 229, 0.05); }
+/* wide five-column tables (the gear tables): tighter cells and type on phones so the last column keeps the 16px page gutter */
+@media (max-width: 600px) {
+  .page__content table.hk-table--wide { font-size: 0.68em; }
+  .page__content table.hk-table--wide th, .page__content table.hk-table--wide td { padding: 0.45em 0.3em; }
+}
 
 /* buttons */
 .btn { border-radius: 6px; font-weight: 700; letter-spacing: 0.04em; }
@@ -134,8 +139,11 @@ a.hk-spec:hover { border-color: $hk-purple; transform: translateY(-2px); }
 .hk-class--active { border-color: $hk-purple; }
 .page__content .hk-class__name { margin: 0 0 0.5em; padding: 0; border: 0; font-size: 1em; letter-spacing: 0.12em; text-transform: uppercase; color: #ffffff; }
 .page__content ul.hk-class__specs { list-style: none; margin: 0; padding: 0; }
-.page__content .hk-class__specs li { display: flex; justify-content: space-between; align-items: center; gap: 0.6em; margin: 0; padding: 0.4em 0; border-top: 1px solid $hk-line; }
+.page__content .hk-class__specs li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3em 0.6em; margin: 0; padding: 0.4em 0; border-top: 1px solid $hk-line; }
 .page__content .hk-class__specs li:first-child { border-top: 0; }
+/* a status pill never breaks inside itself; when a row is too narrow it moves under the name, right-aligned, inside the card */
+.page__content .hk-class__specs .hk-pill { flex: none; margin-left: auto; white-space: nowrap; font-size: 0.7em; letter-spacing: 0.03em; padding: 0.05em 0.55em; }
+.hk-spec__state { white-space: nowrap; }
 
 /* step chains: how a decision escalates or builds (e.g. PRESSURE -> BARKSKIN -> ...); wraps on narrow screens */
 .page__content ol.hk-flow { display: flex; flex-wrap: wrap; align-items: center; row-gap: 0.55em; list-style: none; margin: 1.2em 0 1.6em; padding: 0; }
@@ -248,6 +256,9 @@ $hk-rule: linear-gradient(90deg, rgba(149, 105, 229, 0) 0%, rgba(149, 105, 229, 
 .hk-hdr--balance-korhshield { @include hk-header("hdr-balance-korhshield", 285px, 52%, 50% 40%, 0.7); }
 .hk-hdr--balance-korhvision { @include hk-header("hdr-balance-korhvision", 145px, 30%, 50% 45%, 0.7); }
 .hk-hdr--balance-settings { @include hk-header("hdr-balance-settings", 148px, 28%, 50% 50%, 0.72); }
+/* Balance talents and gear (crops of the HARDKORH Balance poster artwork) */
+.hk-hdr--balance-talents { @include hk-header("hdr-balance-talents", 175px, 36%, 50% 30%, 0.8); }
+.hk-hdr--balance-gear { @include hk-header("hdr-balance-gear", 194px, 40%, 50% 40%, 0.75); }
 .hk-hdr--balance-scope { @include hk-header("hdr-balance-scope", 320px, 44%, 50% 50%, 0.6); }
 /* Support and 404 */
 .hk-hdr--troubleshooting { @include hk-header("hdr-troubleshooting", 230px, 36%, 50% 35%, 0.6); }

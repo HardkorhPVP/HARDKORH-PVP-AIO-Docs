@@ -90,6 +90,10 @@ HARDKORH checks at runtime which abilities you have learned, and uses only those
 
 Force of Nature is used only if the game reports it as a targeted spell. When the game reports it as ground-targeted, the HUD shows it as not automated and it stays yours to cast. See [Scope & Limits]({{ '/balance/scope-and-limits/' | relative_url }}).
 
+## Recommended build and gear
+
+HardkorhPVP recommends a Keeper of the Grove PvP talent build and a Versatility / Haste PvP gearing plan for HARDKORH Balance. Neither is required for HARDKORH to work. See [Talents & Build]({{ '/balance/talents/' | relative_url }}) and [PvP Gear & Stats]({{ '/balance/gear-and-stats/' | relative_url }}).
+
 <div class="notice--warning" markdown="1">
 No rating, win rate or outcome is guaranteed. Results depend on your build, gear, connection, positioning and decisions.
 </div>
