@@ -80,8 +80,10 @@ h1, h2, h3, h4, .page__title { color: #ffffff; letter-spacing: 0.01em; }
 .btn--primary:hover { background-color: $hk-purple-hi; color: #0b0910; }
 .btn--inverse { color: #ffffff; border: 1px solid $hk-purple-hi; background: transparent; }
 .btn--inverse:hover { background: rgba(185, 140, 255, 0.15); color: #ffffff; }
-.hk-btn-soon { display: inline-block; cursor: default; color: $hk-muted; border: 1px dashed $hk-line; background: $hk-surface; }
-.hk-btn-soon:hover { color: $hk-muted; background: $hk-surface; }
+/* Marketplace CTA: informational, not a link (this site publishes no Marketplace listing URL); a long label wraps in balanced lines */
+.hk-btn-market { display: inline-block; max-width: 100%; cursor: default; color: $hk-purple-soft; border: 1px solid rgba(185, 140, 255, 0.45); background: $hk-surface-2; text-wrap: balance; }
+.hk-btn-market:hover { color: $hk-purple-soft; background: $hk-surface-2; }
+.hk-btn-market i { margin-right: 0.5em; }
 
 /* callouts (Minimal Mistakes notices) */
 .notice--primary, .notice--info, .notice--success, .notice--warning, .notice--danger, .notice {

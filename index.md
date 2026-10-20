@@ -13,7 +13,7 @@ excerpt: "Intelligent PvP for World of Warcraft: Midnight on Project Sylvanas. H
   <p class="hk-hero__tagline">Intelligent PvP for World of Warcraft</p>
   <div class="hk-hero__copy"><p>HARDKORH reads the fight, decides what each moment is for, and acts on it: pressure, healer control, interrupts, layered defense and coordinated burst, with KORHVISION showing all of it on a live combat HUD. HARDKORH Druid brings Feral and Balance. Movement, positioning and strategy stay in your hands.</p></div>
   <div class="hk-hero__actions">
-    <span class="btn btn--large hk-btn-soon" aria-disabled="true" title="The Project Sylvanas Marketplace listing is coming with the v1.0.0 release">GET HARDKORH &middot; COMING SOON</span>
+    <span class="btn btn--large hk-btn-market" title="Look for HARDKORH PVP AIO in the Project Sylvanas Marketplace"><i class="fas fa-store" aria-hidden="true"></i>FIND US IN THE PROJECT SYLVANAS MARKETPLACE</span>
     <a class="btn btn--primary btn--large" href="{{ '/getting-started/requirements/' | relative_url }}">READ THE GUIDE</a>
     <a class="btn btn--inverse btn--large" href="https://discord.gg/sv2WNwk2WZ" rel="noopener">JOIN DISCORD</a>
   </div>

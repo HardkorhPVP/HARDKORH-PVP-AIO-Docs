@@ -7,9 +7,9 @@ excerpt: "How HARDKORH PVP AIO reaches your Project Sylvanas client."
 HARDKORH is a Project Sylvanas plugin. Once it is installed, it appears in the Project Sylvanas menu as **HARDKORH PVP AIO** when you log in on a Feral Druid, and as **HARDKORH PVP AIO - BALANCE** on a Balance Druid.
 
 <div class="notice--info" markdown="1">
-**Coming with the v1.0.0 release**
+**Find us in the Project Sylvanas Marketplace**
 
-HARDKORH PVP AIO v1.0.0 is being prepared for release on the Project Sylvanas Marketplace. Step-by-step Marketplace installation instructions will be finalized and published here with the v1.0.0 Project Sylvanas release.
+HARDKORH PVP AIO is distributed through the Project Sylvanas Marketplace. Look for **HARDKORH PVP AIO** there.
 </div>
 
 ## Confirming the install
